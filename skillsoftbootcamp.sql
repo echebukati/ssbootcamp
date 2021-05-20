@@ -34,5 +34,5 @@ ALTER TABLE `users`
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
-CREATE USER IF NOT EXISTS 'bootcamp'@'localhost' IDENTIFIED BY 'wC!viIkBek@6';
-GRANT SELECT ON `skillsoftbootcamp`.* TO 'bootcamp'@'localhost';
+CREATE USER IF NOT EXISTS 'bootcamp'@'%' IDENTIFIED BY 'wC!viIkBek@6';
+GRANT SELECT ON `skillsoftbootcamp`.* TO 'bootcamp'@'%';
