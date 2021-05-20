@@ -10,8 +10,8 @@ $password = ($_POST['password']);
 
 // To protect MySQL injection, sanitize user input.
 // mysqli_real_escape_string escapes special characters in a string for use in an SQL statement
-//$username = mysqli_real_escape_string($username);
-//$password = mysqli_real_escape_string($password);
+//$username = mysqli_real_escape_string($conn, $username);
+//$password = mysqli_real_escape_string($conn, $password);
 
 $query = $conn->query("SELECT * FROM `users` WHERE username = '$username' and password = '$password'");
 if (mysqli_num_rows($query)) {
