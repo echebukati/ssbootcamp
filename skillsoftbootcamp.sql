@@ -34,4 +34,5 @@ ALTER TABLE `users`
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
+CREATE USER 'bootcamp'@'localhost' IDENTIFIED BY 'wC!viIkBek@6';
 GRANT SELECT ON `skillsoftbootcamp`.* TO 'bootcamp'@'localhost';
