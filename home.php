@@ -1,4 +1,6 @@
 <?php
+//require __DIR__ . '/vendor/autoload.php';
+
 session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
   header ("Location: index.php");
