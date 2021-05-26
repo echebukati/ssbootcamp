@@ -15,6 +15,8 @@ $password = ($_POST['password']);
 
 $query = $conn->query("SELECT * FROM `users` WHERE username = '$username' and password = '$password'");
 if (mysqli_num_rows($query)) {
+	session_start();
+	$_SESSION['username']=$username;
 	header("location:home.php");
 } else {
 	echo 'Invalid Login';
@@ -27,6 +29,8 @@ $stmt->bind_param('ss', $username, $password);
 $stmt->execute();
 $result = $stmt->get_result();
 if ($result->num_rows) {
+	session_start();
+	$_SESSION['username']=$username;
 	header("location:home.php");
 } else {
 	echo 'Invalid Login';
