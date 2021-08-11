@@ -1,8 +1,8 @@
 --
--- Database: `skillsoftbootcamp`
+-- Database: `ssbootcamp`
 --
-CREATE DATABASE IF NOT EXISTS `skillsoftbootcamp` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
-USE `skillsoftbootcamp`;
+CREATE DATABASE IF NOT EXISTS `ssbootcamp` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+USE `ssbootcamp`;
 
 --
 -- Table structure for table `users`
@@ -35,4 +35,4 @@ ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 CREATE USER IF NOT EXISTS 'bootcamp'@'%' IDENTIFIED BY 'wC!viIkBek@6';
-GRANT SELECT ON `skillsoftbootcamp`.* TO 'bootcamp'@'%';
+GRANT SELECT ON `ssbootcamp`.* TO 'bootcamp'@'%';
