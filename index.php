@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Skillsoft Bootcamp Login</title>
+<title>SS Bootcamp Login</title>
 </head>
 <body>
 <div class="container">
