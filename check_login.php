@@ -1,9 +1,9 @@
 <?php
-$conn = new mysqli("skillsoftdb-xxx.mysql.database.azure.com", "bootcamp@skillsoftdb-xxx", "wC!viIkBek@6");
+$conn = new mysqli("ssdb-xxx.mysql.database.azure.com", "bootcamp@ssdb-xxx", "wC!viIkBek@6");
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$conn -> select_db("skillsoftbootcamp");
+$conn -> select_db("ssbootcamp");
 
 $username = ($_POST['username']);
 $password = ($_POST['password']);
