@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("ssdb-xxx.mysql.database.azure.com", "bootcamp@ssdb-xxx", "wC!viIkBek@6");
+$conn = new mysqli("ssdb-xxx.mysql.database.azure.com", "bootcamp", "wC!viIkBek@6");
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
