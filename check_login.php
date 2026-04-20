@@ -1,5 +1,8 @@
 <?php
-$conn = new mysqli("ssdb-xxx.mysql.database.azure.com", "bootcamp", "wC!viIkBek@6");
+$conn = mysqli_init();
+mysqli_ssl_set($conn, NULL, NULL, NULL, NULL, NULL);
+$conn->real_connect("ssdb-emmmanuel.mysql.database.azure.com", "bootcamp", "wC!viIkBek@6", "ssbootcamp", 3306, NULL, MYSQLI_CLIENT_SSL);
+
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
@@ -15,11 +18,11 @@ $password = ($_POST['password']);
 
 $query = $conn->query("SELECT * FROM `users` WHERE username = '$username' and password = '$password'");
 if (mysqli_num_rows($query)) {
-	session_start();
-	$_SESSION['username']=$username;
-	header("location:home.php");
+        session_start();
+        $_SESSION['username']=$username;
+        header("location:home.php");
 } else {
-	echo 'Invalid Login';
+        echo 'Invalid Login';
 }
 
 /*
@@ -29,10 +32,10 @@ $stmt->bind_param('ss', $username, $password);
 $stmt->execute();
 $result = $stmt->get_result();
 if ($result->num_rows) {
-	session_start();
-	$_SESSION['username']=$username;
-	header("location:home.php");
+        session_start();
+        $_SESSION['username']=$username;
+        header("location:home.php");
 } else {
-	echo 'Invalid Login';
+        echo 'Invalid Login';
 }
 */
