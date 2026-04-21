@@ -24,7 +24,7 @@ if (isset($_POST['months'])) {
 </head>
 <body>
 <h2>$100 Instant Loans</h2>
-<h3>Enter Period Between 1 and 12 Months</h3>
+<h3>Enter Period Between 1 and 2 Months</h3>
 <form method="post" action="">
     <input name="months" type="text" placeholder="Payback Period (Months)" />
     <input type="submit" value="Apply"/>
